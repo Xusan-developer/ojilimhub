@@ -11,4 +11,17 @@ public static class Solutions
 
         Console.WriteLine(Math.Round(S));
     }
+    public static void Problem22()
+    {
+        var son = int.Parse(Console.ReadLine());
+
+        if(son >= 20 && son <= 30)
+        {
+            Console.WriteLine('1');
+        }
+        else
+        {
+            Console.WriteLine('0');
+        }
+    }
 }
