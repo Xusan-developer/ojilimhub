@@ -170,4 +170,32 @@ public static class Solutions
         }
 
     }
+    public static void Problem32()
+    {
+        var year = int.Parse(Console.ReadLine());
+
+        if( year % 4 == 0)
+        {            
+            if( year % 100 == 0)
+            {
+                if(year % 400 == 0)
+                {
+                    Console.WriteLine("Leap year");
+                }
+                else
+                {
+                    Console.WriteLine("Normal year");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Leap year");
+            }
+
+        }
+        else
+        {
+            Console.WriteLine("Normal year");
+        }
+    }
 }

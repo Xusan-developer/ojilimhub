@@ -8,4 +8,5 @@
 // Solutions.Problem28();
 // Solutions.Problem29();
 // Solutions.Problem30();
-Solutions.Problem31();
+// Solutions.Problem31();
+Solutions.Problem32();
