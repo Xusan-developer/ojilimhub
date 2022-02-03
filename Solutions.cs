@@ -198,4 +198,25 @@ public static class Solutions
             Console.WriteLine("Normal year");
         }
     }
+    public static void Problem33()
+    {
+        var answer = int.Parse(Console.ReadLine());
+
+        for( int i = 1; i <= 3; i++)
+        {
+            var guess = int.Parse(Console.ReadLine());
+            if (guess > answer)
+            {
+                Console.WriteLine("Pastga");
+            }
+            else if(guess < answer)
+            {
+                Console.WriteLine("Teppaga");
+            }
+            else
+            {
+                Console.WriteLine("Yorvordiz");
+            }
+        }
+    }
 }
