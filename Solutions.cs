@@ -138,6 +138,36 @@ public static class Solutions
         {
             Console.WriteLine(son[2]);
         }
+    }
+    public static void Problem31()
+    {
+        var son = int.Parse(Console.ReadLine());
+
+        if( son % 2 == 0 && son % 3 == 0 && son % 5 == 0)
+        {
+            Console.WriteLine('A');
+        }
+        else if( son % 2 == 0 && son % 3 == 0)
+        {
+            Console.WriteLine('B');
+        }
+        else if( son % 2 == 0 && son % 5 == 0)
+        {
+            Console.WriteLine('C');
+        }
+        else if( son % 3 == 0 && son % 5 == 0)
+        {
+            Console.WriteLine('E');
+            
+        }
+        else if( son % 2 == 0 || son % 3 == 0 || son % 5 == 0)
+        {
+            Console.WriteLine('D');
+        }
+        else
+        {
+            Console.WriteLine('N');
+        }
 
     }
 }

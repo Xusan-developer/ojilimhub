@@ -7,4 +7,5 @@
 // Solutions.Problem27(); ishlanmagan
 // Solutions.Problem28();
 // Solutions.Problem29();
-Solutions.Problem30();
+// Solutions.Problem30();
+Solutions.Problem31();
