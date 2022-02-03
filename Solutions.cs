@@ -83,4 +83,22 @@ public static class Solutions
             Console.WriteLine($"{son[1] % son[0]}");
         }
     }
+    public static void Problem27()
+    {
+
+    }
+    public static void Problem28()
+    {
+        var s =int.Parse( Console.ReadLine() );
+        
+        if( s < 0 || s >= 40)
+        {
+            Console.WriteLine("ichkarida o'yna");
+        }
+        else if ( s >= 0 || s < 40)
+        {
+            Console.WriteLine("tashqarida o'yna");
+        }
+    
+    }
 }
