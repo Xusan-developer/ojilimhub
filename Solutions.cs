@@ -66,4 +66,21 @@ public static class Solutions
             Console.WriteLine(son[1]);
         }
     }
+    public static void Problem26()
+    {
+        var son = Console.ReadLine()
+            .Split( ' ', StringSplitOptions.RemoveEmptyEntries)
+            .Select(int.Parse)
+            .ToList();
+        if( son[0] > son[1])
+        {
+            Console.WriteLine($"{son[0] / son[1]}");
+            Console.WriteLine($"{son[0] % son[1]}");
+        }
+        else if (son[1] > son[0])
+        {
+            Console.WriteLine($"{son[1] / son[0]}");
+            Console.WriteLine($"{son[1] % son[0]}");
+        }
+    }
 }
