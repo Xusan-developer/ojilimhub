@@ -83,7 +83,7 @@ public static class Solutions
             Console.WriteLine($"{son[1] % son[0]}");
         }
     }
-    public static void Problem27()
+    public static void Problem27()   // ishlanmadi
     {
 
     }
@@ -233,6 +233,75 @@ public static class Solutions
         else
         {
             Console.WriteLine("none");
+        }
+    }
+    public static void Problem35()   //ishlanmadi
+    {
+        var guess1 = Console.ReadLine()
+            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+            .Select(int.Parse)
+            .ToList();
+        var guess2 = Console.ReadLine()
+            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+            .Select(int.Parse)
+            .ToList();
+        var s = 0;
+        var b = 0;
+        for(int i = 0; i<=2; i++)
+        {
+            if(guess1[i]==guess2[i])
+            {
+                s++;
+            }
+        }
+        Console.Write($"{s}S");
+        for(int k = 0; k<=2; k++)
+        {
+            for(int y = 0; y<=2; y++)
+            {
+                if( guess1[k] == guess2[y] )
+                {
+                    s++;
+                }
+                else{b++;}
+            }
+        }
+        Console.WriteLine($"{b}B");
+    }
+    public static void Problem36()
+    {
+
+    }
+    public static void Problem37()
+    {
+        Console.WriteLine("1.Americano (500 sum)");
+        Console.WriteLine("2.Caffe Latte (400 sum)");
+        Console.WriteLine("3.Lemon Tea (300 sum)");
+
+        var num = int.Parse(Console.ReadLine());
+        var sum = int.Parse(Console.ReadLine());
+        var result = 0;
+        
+        var Americano =500;
+        var Caffe = 400;
+        var Lemon = 300;
+        switch(num)
+        {
+            case 1: 
+                result = sum-Americano;
+                Console.WriteLine("Americano");
+                Console.WriteLine($"{result/500} {result%500/100}");
+                break;
+            case 2:
+                result = sum-Caffe;
+                Console.WriteLine("Caffe Latte");
+                Console.WriteLine($"{result/500} {result%500/100}");
+                break;
+            case 3:
+                result = sum-Lemon;
+                Console.WriteLine("Lemon Tea");
+                Console.WriteLine($"{result/500} {result%500/100}");
+                break;
         }
     }
 }

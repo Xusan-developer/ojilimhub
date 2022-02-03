@@ -11,5 +11,7 @@
 // Solutions.Problem31();
 // Solutions.Problem32();
 // Solutions.Problem33();
-Solutions.Problem34();
-// Solutions.Problem35();
+// Solutions.Problem34();
+// Solutions.Problem35(); ishlanmadi
+// Solutions.Problem36();
+Solutions.Problem37();
