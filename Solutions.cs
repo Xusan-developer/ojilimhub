@@ -101,4 +101,23 @@ public static class Solutions
         }
     
     }
+    public static void Problem29()
+    {
+        var son = Console.ReadLine()
+            .Split( ' ', StringSplitOptions.RemoveEmptyEntries)
+            .Select(int.Parse)
+            .ToList();
+        if( son[0] == son[1] * son[1] )
+        {
+            Console.WriteLine($"{son[1]}*{son[1]}={son[0]}");
+        }
+        else if( son[1] == son[0] * son[0] )
+        {
+            Console.WriteLine($"{son[0]}*{son[0]}={son[1]}");
+        }
+        else
+        {
+            Console.WriteLine("none");
+        }
+    }
 }

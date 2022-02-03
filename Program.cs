@@ -5,4 +5,5 @@
 // Solutions.Problem25();
 // Solutions.Problem26();
 // Solutions.Problem27(); ishlanmagan
-Solutions.Problem28();
+// Solutions.Problem28();
+Solutions.Problem29();
