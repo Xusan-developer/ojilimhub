@@ -51,4 +51,19 @@ public static class Solutions
             Console.WriteLine("odd");
         }
     }
+    public static void Problem25()
+    {
+        var son = Console.ReadLine()
+            .Split( ' ', StringSplitOptions.RemoveEmptyEntries)
+            .Select(int.Parse)
+            .ToList();
+        if( son[0] > son[1])
+        {
+            Console.WriteLine(son[0]);
+        }
+        else
+        {
+            Console.WriteLine(son[1]);
+        }
+    }
 }
