@@ -38,4 +38,17 @@ public static class Solutions
             Console.WriteLine('0');
         }
     }
+    public static void Problem24()
+    {
+        var son = int.Parse(Console.ReadLine());
+        
+        if( son % 2 == 0)
+        {
+            Console.WriteLine("even");
+        }
+        else
+        {
+            Console.WriteLine("odd");
+        }
+    }
 }
