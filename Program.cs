@@ -10,4 +10,6 @@
 // Solutions.Problem30();
 // Solutions.Problem31();
 // Solutions.Problem32();
-Solutions.Problem33();
+// Solutions.Problem33();
+Solutions.Problem34();
+// Solutions.Problem35();

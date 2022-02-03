@@ -219,4 +219,20 @@ public static class Solutions
             }
         }
     }
+    public static void Problem34()
+    {
+        var harf = char.Parse(Console.ReadLine());
+        if( harf >= 'a' && harf <= 'z')
+        {
+            Console.WriteLine(char.ToUpper(harf));
+        }
+        else if ( harf >= 'A' && harf <= 'Z')
+        {
+            Console.WriteLine(char.ToLower(harf));
+        }
+        else
+        {
+            Console.WriteLine("none");
+        }
+    }
 }
