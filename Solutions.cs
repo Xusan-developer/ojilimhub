@@ -24,4 +24,18 @@ public static class Solutions
             Console.WriteLine('0');
         }
     }
+
+    public static void Problem23()
+    {
+        var harf = char.Parse(Console.ReadLine());
+
+        if(char.IsLetter(harf))
+        {
+            Console.WriteLine('1');
+        }
+        else
+        {
+            Console.WriteLine('0');
+        }
+    }
 }
