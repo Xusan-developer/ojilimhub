@@ -335,4 +335,23 @@ public static class Solutions
         }
         Console.WriteLine(count);
     }
+    public static void Problem40()
+    {
+        var num = long.Parse(Console.ReadLine());
+        int fac = 1;
+
+        for(int i = 1; i<=num; i++)
+        {
+            fac*=i;
+            if(fac==num)
+            {
+                Console.WriteLine("true");
+                break;
+            }
+        }  
+        if(fac!=num)
+        {
+            Console.WriteLine("false");
+        }
+    }
 }
