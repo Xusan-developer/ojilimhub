@@ -268,7 +268,7 @@ public static class Solutions
         }
         Console.WriteLine($"{b}B");
     }
-    public static void Problem36()
+    public static void Problem36()  //ishlanmadi
     {
 
     }
@@ -319,7 +319,7 @@ public static class Solutions
             Console.WriteLine("false");
         }
     }
-    public static void Problem39()
+    public static void Problem39()  //ishlanmadi chala
     {
         var son = int.Parse(Console.ReadLine());
         var sonlar = Console.ReadLine()
@@ -354,4 +354,23 @@ public static class Solutions
             Console.WriteLine("false");
         }
     }
+    public static void Problem41()
+    {
+        var son = int.Parse(Console.ReadLine());
+
+        for(int i = 2; i < son; i++)
+        {
+            if(son % i == 0)
+            {
+                son++;
+                i = 2;
+            }
+            else
+            {
+                Console.WriteLine(son);
+                break;
+            }
+        }
+    }
+    
 }
