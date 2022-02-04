@@ -281,7 +281,7 @@ public static class Solutions
         var num = int.Parse(Console.ReadLine());
         var sum = int.Parse(Console.ReadLine());
         var result = 0;
-        
+
         var Americano =500;
         var Caffe = 400;
         var Lemon = 300;
@@ -303,5 +303,36 @@ public static class Solutions
                 Console.WriteLine($"{result/500} {result%500/100}");
                 break;
         }
+    }
+    public static void Problem38()   //ishlanmadi
+    {
+        var pif = Console.ReadLine()
+            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+            .Select(int.Parse)
+            .ToList();
+        if(pif[0]>pif[1]&&pif[0]>pif[2])
+        {
+            Console.WriteLine("true");
+        }
+        else
+        {
+            Console.WriteLine("false");
+        }
+    }
+    public static void Problem39()
+    {
+        var son = int.Parse(Console.ReadLine());
+        var sonlar = Console.ReadLine()
+            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+            .Select(int.Parse)
+            .ToList();
+        var cube = 0;
+        var count = 0;
+        for( int i = 1; i <= son; i++ )
+        {
+            cube = sonlar[i-1]*sonlar[i-1]*sonlar[i-1];
+            count+=cube;
+        }
+        Console.WriteLine(count);
     }
 }
