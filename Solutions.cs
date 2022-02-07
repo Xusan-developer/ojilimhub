@@ -372,5 +372,67 @@ public static class Solutions
             }
         }
     }
-    
+    public static void Problem42()  //ishlanmadi
+    {
+        var son = int.Parse(Console.ReadLine());
+        var sonlar = Console.ReadLine()
+            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+            .Select(int.Parse)
+            .ToList();
+        Console.WriteLine($"{sonlar}");
+    }
+    public static void Problem43()
+    {
+        var son = Console.ReadLine()
+            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+            .Select(long.Parse)
+            .ToArray();
+        var count0 = 0;
+        var count1 = 0;
+        var son1 = son[0];
+        var son2 = son[1];
+        for(int i = 0; son1>=1;i++)
+        {
+            if(son1==1)
+            {
+                break;
+            }
+            else if(son1 % 2 == 0)
+            {
+                son1=son1/2;
+                count0++;
+            }
+            else
+            {
+                son1=son1*3+1;
+                count0++;
+            }
+        }
+        for(int k = 0; son2>=1; k++)
+        {
+            if(son2==1)
+            {
+                break;
+            }
+            else if(son2 % 2 == 0)
+            {
+                son2 = son2/2;
+                count1++;
+            }
+            else
+            {
+                son2 = son2*3+1;
+                count1++;
+            }
+        }
+        if(count0 > count1)
+        {
+            Console.WriteLine($"{son[1]} {count1}");
+        }
+        else
+        {
+            Console.WriteLine($"{son[0]} {count0}");
+        }
+        
+    }    
 }
