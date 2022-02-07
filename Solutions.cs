@@ -383,47 +383,22 @@ public static class Solutions
     }
     public static void Problem43()
     {
-        var son = Console.ReadLine()
-            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
-            .Select(long.Parse)
-            .ToArray();
-        var count0 = 0;
-        var count1 = 0;
-        var son1 = son[0];
-        var son2 = son[1];
+        var sonlar = Console.ReadLine()
+			.Split(' ', StringSplitOptions.RemoveEmptyEntries)
+			.Select(long.Parse)
+			.ToList();
+		
+		int count = 0;
+		long a = sonlar[0];
+		long b = sonlar[1];
 
-        for(int i = 0; son1>1 && son2>1; i++)
-        {
-            
-            if(son1 % 2 == 0 )
-            {
-                son1=son1/2;
-                count0++;
-            }
-            else
-            {
-                son1=son1*3+1;
-                count0++;
-            }
-            if(son2 % 2 == 0)
-            {    
-                son2 = son2/2;
-                count1++;
-            }
-            else
-            {
-                son2 = son2*3+1;
-                count1++;
-            }
-        
-        }
-        if(count0 > count1)
-        {
-            Console.WriteLine($"{son[0]} {count0}");
-        }
-        else
-        {
-            Console.WriteLine($"{son[1]} {count1}");
-        }
+		while(a > 1 && b > 1)
+		{
+			a = a % 2 == 0 ? a / 2 : a * 3 + 1;
+			b = b % 2 == 0 ? b / 2 : b * 3 + 1;
+			count++;
+		}
+
+		    Console.WriteLine($"{(a == 1 ? sonlar[0] : sonlar[1])} {count}");
     }
 }
