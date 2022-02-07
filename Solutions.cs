@@ -391,13 +391,11 @@ public static class Solutions
         var count1 = 0;
         var son1 = son[0];
         var son2 = son[1];
-        for(int i = 0; son1>=1;i++)
+
+        for(int i = 0; son1>1 && son2>1; i++)
         {
-            if(son1==1)
-            {
-                break;
-            }
-            else if(son1 % 2 == 0)
+            
+            if(son1 % 2 == 0 )
             {
                 son1=son1/2;
                 count0++;
@@ -407,15 +405,8 @@ public static class Solutions
                 son1=son1*3+1;
                 count0++;
             }
-        }
-        for(int k = 0; son2>=1; k++)
-        {
-            if(son2==1)
-            {
-                break;
-            }
-            else if(son2 % 2 == 0)
-            {
+            if(son2 % 2 == 0)
+            {    
                 son2 = son2/2;
                 count1++;
             }
@@ -424,15 +415,15 @@ public static class Solutions
                 son2 = son2*3+1;
                 count1++;
             }
+        
         }
         if(count0 > count1)
         {
-            Console.WriteLine($"{son[1]} {count1}");
+            Console.WriteLine($"{son[0]} {count0}");
         }
         else
         {
-            Console.WriteLine($"{son[0]} {count0}");
+            Console.WriteLine($"{son[1]} {count1}");
         }
-        
-    }    
+    }
 }
