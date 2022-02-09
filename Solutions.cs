@@ -398,7 +398,23 @@ public static class Solutions
 			b = b % 2 == 0 ? b / 2 : b * 3 + 1;
 			count++;
 		}
-
 		    Console.WriteLine($"{(a == 1 ? sonlar[0] : sonlar[1])} {count}");
     }
+    public static void Problem44()
+    {
+        var n = int.Parse(Console.ReadLine());
+
+        var fib1 = 0;
+        var fib2 = 1;
+        var fib3 = 0;
+        
+        for ( int i = 2; i < n; i++)
+        {
+            fib3 = fib1+fib2;
+            fib1 = fib2;
+            fib2 = fib3;
+        }
+        Console.WriteLine(fib3);
+    }
+    
 }
