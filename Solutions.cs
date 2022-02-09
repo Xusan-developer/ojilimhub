@@ -416,5 +416,20 @@ public static class Solutions
         }
         Console.WriteLine(fib3);
     }
-    
+    public static void Problem46()
+    {
+        var son = int.Parse(Console.ReadLine());
+
+        for(int i = 1; i <= son; i++)
+        {
+            if( son % i == 0)
+            {
+                Console.Write($"{i} ");
+            }
+        }
+    }
+    public static void Problem45()
+    {
+        
+    }
 }
