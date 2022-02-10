@@ -83,9 +83,28 @@ public static class Solutions
             Console.WriteLine($"{son[1] % son[0]}");
         }
     }
-    public static void Problem27()   // ishlanmadi
+    public static void Problem27()  
     {
-
+        var son = Console.ReadLine()
+            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+            .Select(int.Parse)
+            .ToList();
+        var s = son[0];
+        var m = son[1];
+        if(m>45 && m<60)
+        {
+            m-=45;
+            Console.WriteLine($"{s} {m}");
+        }
+        else if(s==0)
+        {
+            s=24;
+            Console.WriteLine($"{s-1} {(m+60)-45}");
+        }
+        else
+        {
+            Console.WriteLine($"{s-1} {(m+60)-45}");
+        }
     }
     public static void Problem28()
     {
@@ -430,6 +449,9 @@ public static class Solutions
     }
     public static void Problem45()
     {
+        var str = Console.ReadLine()
+            .Split()
+            .ToList();
         
     }
 }

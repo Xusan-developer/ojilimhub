@@ -4,7 +4,7 @@
 // Solutions.Problem24();
 // Solutions.Problem25();
 // Solutions.Problem26();
-// Solutions.Problem27(); ishlanmagan
+Solutions.Problem27(); //ishlanmagan
 // Solutions.Problem28();
 // Solutions.Problem29();
 // Solutions.Problem30();
@@ -21,5 +21,5 @@
 // Solutions.Problem41();
 // Solutions.Problem43();
 // Solutions.Problem44();
-Solutions.Problem45();
+// Solutions.Problem45();
 // Solutions.Problem46();
