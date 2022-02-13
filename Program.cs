@@ -15,8 +15,8 @@
 // Solutions.Problem35(); 
 // Solutions.Problem36();
 // Solutions.Problem37();
-Solutions.Problem38();
-// Solutions.Problem39();
+// Solutions.Problem38();
+Solutions.Problem39();
 // Solutions.Problem40();
 // Solutions.Problem41();
 // Solutions.Problem43();

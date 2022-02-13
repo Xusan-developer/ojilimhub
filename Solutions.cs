@@ -254,7 +254,7 @@ public static class Solutions
             Console.WriteLine("none");
         }
     }
-    public static void Problem35()   
+    public static void Problem35()   //chalaro
     {
         var guess1 = Console.ReadLine()
             .Split(' ', StringSplitOptions.RemoveEmptyEntries)
@@ -356,7 +356,7 @@ public static class Solutions
             Console.WriteLine("false");
         }
     }
-    public static void Problem39()  //ishlanmadi chala
+    public static void Problem39()
     {
         var son = int.Parse(Console.ReadLine());
         var sonlar = Console.ReadLine()
@@ -365,9 +365,9 @@ public static class Solutions
             .ToList();
         var cube = 0;
         var count = 0;
-        for( int i = 1; i <= son; i++ )
+        for( int i = 0; i < son; i++ )
         {
-            cube = sonlar[i-1]*sonlar[i-1]*sonlar[i-1];
+            cube = sonlar[i]*sonlar[i]*sonlar[i];
             count+=cube;
         }
         Console.WriteLine(count);
