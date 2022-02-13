@@ -271,25 +271,50 @@ public static class Solutions
             if(guess1[i]==guess2[i])
             {
                 s++;
+                break;
             }
+            
         }
-        Console.Write($"{s}S");
         for(int k = 0; k<=2; k++)
         {
-            for(int y = 0; y<=2; y++)
+            if(guess1[0]==guess2[1] || guess1[0]==guess2[2])
             {
-                if( guess1[k] == guess2[y] )
-                {
-                    s++;
-                }
-                else{b++;}
+                b++;
+                break;
             }
         }
-        Console.WriteLine($"{b}B");
+        Console.Write($"{s}S {b}B");
+        // for(int k = 0; k<=2; k++)
+        // {
+        //     for(int y = 0; y<=2; y++)
+        //     {
+        //         if()
+        //         else if( guess1[k] == guess2[y] )
+        //         {
+        //             s++;
+        //         }
+        //         else{b++;}
+        //     }
+        // }
+        // Console.WriteLine($"{b}B");
     }
     public static void Problem36()  //ishlanmadi
     {
-
+        var son = Console.ReadLine()
+            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+            .ToList();
+        var son1 = int.Parse(son[0]);
+        var son2 = int.Parse(son[2]);
+        char oper = char.Parse(son[1]);
+        
+        if( oper =='+')
+        {
+        Console.WriteLine($"{son1+son2}");
+        }
+        else if(oper=='-')
+        {
+        Console.WriteLine($"{son1-son2}");
+        }
     }
     public static void Problem37()
     {
