@@ -254,7 +254,7 @@ public static class Solutions
             Console.WriteLine("none");
         }
     }
-    public static void Problem35()   //ishlanmadi
+    public static void Problem35()   
     {
         var guess1 = Console.ReadLine()
             .Split(' ', StringSplitOptions.RemoveEmptyEntries)
@@ -271,34 +271,24 @@ public static class Solutions
             if(guess1[i]==guess2[i])
             {
                 s++;
-                break;
             }
+        }
+        if(guess1[0]==guess2[1] || guess1[0]==guess2[2])
+        {
+            b++;
             
         }
-        for(int k = 0; k<=2; k++)
+        if(guess1[1]==guess2[0] || guess1[1]==guess2[2])
         {
-            if(guess1[0]==guess2[1] || guess1[0]==guess2[2])
-            {
-                b++;
-                break;
-            }
+            b++;
         }
-        Console.Write($"{s}S {b}B");
-        // for(int k = 0; k<=2; k++)
-        // {
-        //     for(int y = 0; y<=2; y++)
-        //     {
-        //         if()
-        //         else if( guess1[k] == guess2[y] )
-        //         {
-        //             s++;
-        //         }
-        //         else{b++;}
-        //     }
-        // }
-        // Console.WriteLine($"{b}B");
+        if(guess1[2]==guess2[0] || guess1[2]==guess2[1])
+        {
+            b++;
+        }
+        Console.WriteLine($"{s}S {b}B");
     }
-    public static void Problem36()  //ishlanmadi
+    public static void Problem36()  
     {
         var son = Console.ReadLine()
             .Split(' ', StringSplitOptions.RemoveEmptyEntries)
@@ -348,13 +338,16 @@ public static class Solutions
                 break;
         }
     }
-    public static void Problem38()   //ishlanmadi
+    public static void Problem38()   
     {
         var pif = Console.ReadLine()
             .Split(' ', StringSplitOptions.RemoveEmptyEntries)
             .Select(int.Parse)
             .ToList();
-        if(pif[0]>pif[1]&&pif[0]>pif[2])
+        
+        if( pif[0] * pif[0] == pif[1]*pif[1] + pif[2]*pif[2]
+            || pif[1] * pif[1] == pif[0]*pif[0] + pif[2]*pif[2]
+            || pif[2] * pif[2] == pif[0]*pif[0] + pif[1]*pif[1] )
         {
             Console.WriteLine("true");
         }
