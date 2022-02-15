@@ -266,26 +266,37 @@ public static class Solutions
             .ToList();
         var s = 0;
         var b = 0;
-        for(int i = 0; i<=2; i++)
+
+        
+        if( guess2[0] == guess1[0] )
         {
-            if(guess1[i]==guess2[i])
-            {
-                s++;
-            }
+            s++;
         }
-        if(guess1[0]==guess2[1] || guess1[0]==guess2[2])
-        {
-            b++;
-            
-        }
-        if(guess1[1]==guess2[0] || guess1[1]==guess2[2])
+        else if ( guess2[0] == guess1[1] || guess2[0] == guess1[2])
         {
             b++;
         }
-        if(guess1[2]==guess2[0] || guess1[2]==guess2[1])
+
+
+        if(guess2[1] == guess1[1])
+        {
+            s++;
+        }
+        else if(guess2[1] == guess1[0] || guess2[1] == guess1[2])
         {
             b++;
         }
+        
+        
+        if(guess2[2] == guess1[2])
+        {
+            s++;
+        }
+        else if(guess2[2] == guess1[1] || guess2[2] == guess1[0])
+        {
+            b++;
+        }
+        
         Console.WriteLine($"{s}S {b}B");
     }
     public static void Problem36()  
@@ -453,6 +464,18 @@ public static class Solutions
         }
         Console.WriteLine(fib3);
     }
+    public static void Problem45()    //tushunmadim
+    {
+        var str = Console.ReadLine();
+        char[] counting = str.ToCharArray();
+         foreach (char words in counting)
+            {
+                int value = Convert.ToInt32(words);
+                string hexaOutput = String.Format("{0:X}", value);
+                Console.Write("{1} ", words, hexaOutput);
+            }
+        
+    }
     public static void Problem46()
     {
         var son = int.Parse(Console.ReadLine());
@@ -465,11 +488,41 @@ public static class Solutions
             }
         }
     }
-    public static void Problem45()
+    public static void Problem47()
     {
-        var str = Console.ReadLine()
-            .Split()
+        var son = Console.ReadLine()
+            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+            .Select(int.Parse)
             .ToList();
-        
+        var count = 0;
+        for(int i=son[0]; i<=0; i++)
+        {
+            count+=i;
+            
+        }
+        Console.WriteLine(count);
+    }
+    public static void Problem48()
+    {
+
+    }
+    public static void Problem49()
+    {
+        int qatorlar = 5;
+        for(int qator = 1; qator <= 4; qator++)
+        {
+            var space = qatorlar-qator;
+            while(space<1)
+            {
+                Console.Write(' ');
+            }
+            var stars = qator*2-1;
+            while(stars<1);
+            {
+                Console.Write("* ");
+            }
+            Console.WriteLine();
+
+        }
     }
 }
