@@ -254,7 +254,7 @@ public static class Solutions
             Console.WriteLine("none");
         }
     }
-    public static void Problem35()   //chalaro
+    public static void Problem35()
     {
         var guess1 = Console.ReadLine()
             .Split(' ', StringSplitOptions.RemoveEmptyEntries)
@@ -420,14 +420,15 @@ public static class Solutions
             }
         }
     }
-    public static void Problem42()  //ishlanmadi
+    public static void Problem42()    //chala
     {
         var son = int.Parse(Console.ReadLine());
-        var sonlar = Console.ReadLine()
-            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
-            .Select(int.Parse)
-            .ToList();
-        Console.WriteLine($"{sonlar}");
+        
+        for(int i = 0; i < son; i++)
+        {
+            
+        }
+                                
     }
     public static void Problem43()
     {
@@ -508,21 +509,39 @@ public static class Solutions
     }
     public static void Problem49()
     {
-        int qatorlar = 5;
-        for(int qator = 1; qator <= 4; qator++)
+        var ustun = int.Parse(Console.ReadLine());
+
+        for(int qator = 1; qator <= ustun; qator++)
         {
-            var space = qatorlar-qator;
-            while(space<1)
+            var space = ustun-qator;
+            while(space > 0)
             {
-                Console.Write(' ');
+                Console.Write(" ");
+                space--;
             }
             var stars = qator*2-1;
-            while(stars<1);
+            while(stars > 0)
             {
-                Console.Write("* ");
+                Console.Write("*");
+                stars--;
             }
             Console.WriteLine();
-
+        }
+        for(int j = ustun-1; j > 0; j--)
+        {
+            var space = ustun - j;
+            while(space > 0)
+            {
+                Console.Write(" ");
+                space--;
+            }
+            var stars = j*2-1;
+            while(stars > 0)
+            {
+                Console.Write("*");
+                stars--;
+            }
+            Console.WriteLine();
         }
     }
 }
